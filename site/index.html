@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+     <title>Minekush Server</title>
+     <meta charset="utf-8">
+     <meta name = "format-detection" content = "telephone=no" />
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+     <script src="js/jquery.js"></script>
+     <script src="js/jquery-migrate-1.1.1.js"></script>
+     <script src="js/jquery.easing.1.3.js"></script>
+	 <script src="js/script.js"></script>
+     <script src="js/superfish.js"></script>
+     <script src="js/jquery.mobilemenu.js"></script>
+     <script src="js/jquery.animate-colors-min.js"></script>
+     <script src="js/camera.js"></script>
+     <script src="js/jquery.ui.totop.js"></script>
+     <script src="js/sForm.js"></script>
+     <!--[if (gt IE 9)|!(IE)]><!-->
+         <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]--> 
+     <!-- font-awesome font -->
+    <link rel="stylesheet" href="fonts/font-awesome.css" type="text/css" media="screen">
+    <!-- end font-awesome font -->
+      <script>
+        jQuery
+        $(window).load(function(){
+            jQuery('#camera').camera({
+
+                loader: true,
+                pagination: false,
+                thumbnails: false,
+                transPeriod: 2000, 
+                height: '39.9%',
+                caption: false,
+                navigation: false,
+                fx: 'simpleFade',
+                autoAdvance: true
+
+            });
+
+            $('.block_1 .button1').hover(function()
+                {
+                    $(this).parent().find('.block_num').animate({'color':'#fff'});
+                    $(this).parent().find('h5').animate({'color':'#eada51'});
+                    $(this).parent().find('p').animate({'color':'#fff'});          
+                }, function(){
+                    $(this).parent().find('.block_num').animate({'color':'#4c4b4b'});
+                    $(this).parent().find('h5').animate({'color':'#fff'});
+                    $(this).parent().find('p').animate({'color':'#4c4b4b'});
+                });
+
+             $('.block_3 .button1').hover(function()
+                {
+                    $(this).parent().find('.block_letter').animate({'color':'#fff'});
+                    $(this).parent().parent().find('.icon').animate({'backgroundColor':'#eada51'});
+                    $(this).parent().parent().find('.icon div').animate({'color':'#fff'});          
+                }, function(){
+                    $(this).parent().find('.block_letter').animate({'color':'#4c4b4b'});
+                    $(this).parent().parent().find('.icon').animate({'backgroundColor':'#1f1f1f'});
+                    $(this).parent().parent().find('.icon div').animate({'color':'#4c4b4b'});
+                })
+
+        });     
+        jQuery(function(){
+            $().UItoTop({ easingType: 'easeOutQuart' });
+            $(".top_arr").click(function(){
+                $('body, html').stop().animate({'scrollTop': 0}); 
+            });
+        });     
+    </script>
+     <!--<![endif]-->
+     <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+   		<script src="js/html5shiv.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+     </head>
+     <body>
+<!--==============================header=================================-->
+<header>
+    <div class="slider_box">
+        <div class="camera_wrap camera_azure_skin" id="camera">        
+            <div data-src="images/gall_pic1.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>
+            <div data-src="images/gall_pic2.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>
+            <div data-src="images/gall_pic3.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>            
+        </div>
+        <div class="logoHolder">
+            <div class="container_12">
+                <div class="grid_12 text_center">
+                    <img class="slog" src="images/slog.png" alt="">
+                </div>
+            </div>
+</header>
+<!--=======content================================-->
+<section id="content">
+    <div class="container_12">
+        <div class="container_12">
+            <div class="grid_4">
+                <div class="block_1">
+                    <div class="block_num">
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <h5>Temos um grupo da nossa comunidade.</h5>
+                    <p>Clique no botão abaixo para fazer parte.</p>
+                    <a class="button1" onclick="abrirLink()">Whatsapp</a>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="block_1">
+                    <div class="block_num">
+                    </div>
+                    <h4>Discord</h4>
+                    <h5>Está em duvida sobre como acessar ou sobre algum plugin do servidor?</h5>
+                    <p>Clique no link abaixo para acessar a comunidade do discord, contendo a wiki dos comandos separada por topicos e o ip de login. </p>
+                    <a class="button1" onclick="abrirLink2()">Discord</a>
+                </div>
+            </div>
+            <div class="grid_4">
+                <div class="block_1">
+                    <div class="block_num">
+                    </div>
+                    <h4>Minecraft</h4>
+                    <h5>Não possui o jogo original?</h5>
+                    <p>Recomendamos essas opções de jogos não oficiais. </p>
+                    <a class="button1" onclick="abrirLink3()">Bedrock</a> <a class="button1" onclick="abrirlink4()">Java</a>
+                </div>
+            </div>
+            <script>
+                // Função para abrir um link quando o botão for clicado
+                function abrirLink() {
+                    // Substitua a URL abaixo pelo link desejado
+                    window.location.href = "https://chat.whatsapp.com/HXXemybPBURKmDNh1qtln8";
+                }
+                function abrirLink2() {
+                    // Substitua a URL abaixo pelo link desejado
+                    window.location.href = "https://discord.com/invite/KH3nstJ3tt ";
+                }
+                function abrirLink3() {
+                // Substitua a URL abaixo pelo link desejado
+                window.location.href = "https://mcpedl.org/downloading/";
+            }
+                function abrirlink4(){
+                window.location.href = "https://tlauncher.org/en/";
+            }
+            </script>
+</section>
+<!--=======footer=================================-->
+<footer>
+    <div class="container_12">
+            <div class="grid_12">
+                    <p class="copyright"><span>Minekush</span> &bull; &copy; 2024<br>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
